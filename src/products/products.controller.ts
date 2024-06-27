@@ -33,6 +33,8 @@ export class ProductsController {
     // @Payload('id') id: string,
     @Payload() updateProductDto: UpdateProductDto,
   ) {
+    console.log({ updateProductDto });
+
     return this.productsService.update(updateProductDto.id, updateProductDto);
   }
 
